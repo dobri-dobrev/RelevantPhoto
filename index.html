@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script src="jquery-1.7.2.min.js" type="text/javascript" > </script>
+		<style>
+			img{
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<label for="POI"> POI </label>
+		<input type="text" id="POI"/> <br/>
+		<label for="lat">Latitude</label>
+		<input type="text" name="someName" id="lat"/> <br/>
+		<label for="long">Longitude</label>
+		<input type="text" name="someName" id="long"/> <br/>
+		<button id="submit" type="button" value="run" onclick="query()" style="height: 20px; width:50px;">Get</button>
+		<div id="photos"></div>
+		<script src="proto.js" type="text/javascript" > </script>
+	</body>
+</html>
