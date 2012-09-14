@@ -2,7 +2,6 @@ function query(){
 	var name= $("#POI").val();
 	var lat= $("#lat").val();
 	var lon= $("#long").val();
-	//console.log(lon);
 	var urlJSON= createURL(name, lat, lon);
 	console.log(urlJSON);
 	$.getJSON(urlJSON, displayImages);
@@ -18,16 +17,6 @@ function displayImages(data) {
 		photos.appendChild(oImg);
 	}
 
-   
-}
-function createImg(url){
-	var img= document.createElement("img");
-	img.setAttribute('src', url);
-	img.setAttribute('alt', "fail");
-	img.setAttribute('width', "300");
-	img.setAttribute('height', "300");
-	return img;
-}
 function createURL(name, lat, lon){
 	
 	name=name.replace(/\s/g, "%20");
@@ -40,7 +29,17 @@ function createURL(name, lat, lon){
 	urlJ+="%22%20and%20api_key%3D%";
 	urlJ+="APIKEY";
 	urlJ+="%22%20and%20sort%3D%22relevance%22%20and%20media%3D%22photos%22%20and%20radius%3D%222%22&format=json&diagnostics=true&callback=?";
-	//console.log(urlJ);
 	return urlJ;
 }
+   
+}
+function createImg(url){
+	var img= document.createElement("img");
+	img.setAttribute('src', url);
+	img.setAttribute('alt', "fail");
+	img.setAttribute('width', "300");
+	img.setAttribute('height', "300");
+	return img;
+}
+
 
